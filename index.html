@@ -6,14 +6,28 @@
     <title>Tea House With Tailwind</title>
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              manrope: ["Manrope", "serif"],
+            },
+          },
+        },
+      };
+    </script>
     <!-- Google font CDN -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
 
-      .font-manrope {
-        font-family: "Manrope", serif;
-      }
-    </style>
     <!-- fontawesome CDN -->
     <link
       rel="stylesheet"
@@ -69,10 +83,13 @@
     </header>
 
     <!-- Main Content -->
+    <!-- max-w-screen-2xl mx-auto -->
+    <!-- class="max-w-screen-2xl mx-auto" -->
 
-    <main class="max-w-screen-2xl mx-auto">
+    <main class="max-w-screen-2xl mx-auto lg:px-9">
       <!-- Featured Product Section -->
-      <section class="px-16 lg:px-28 py-8 lg:py24">
+      <!-- class="px-16 lg:px-28 py-8 lg:py-24" -->
+      <section class="px-16 lg:px-28 py-8 lg:py-24">
         <!-- Heading -->
         <div class="flex flex-col items-center space-y-4 mb-6">
           <!-- Heading Text -->
@@ -143,7 +160,8 @@
       </section>
 
       <!-- Great Tea Section -->
-      <section class="mb-24 px-16 lg:px-28 py-8 lg:py24">
+      <!-- class="mb-24 px-16 lg:px-28 py-8 lg:py-24" -->
+      <section class="mb-24 px-16 lg:px-28 py-8 lg:py-4">
         <div class="grid grid-cols-1 lg:grid-cols-2">
           <!-- Image Section -->
           <div class="grid grid-cols-2 grid-rows-3 gap-4 w-5/6 mb-8">
@@ -347,9 +365,7 @@
       <!-- <div class="w-9/12 bg-black h-24 mx-auto"></div> -->
       <div class="w-11/12 mx-auto">
         <!-- Logo -->
-        <div
-          class="mb-8 flex justify-between items-center"
-        >
+        <div class="mb-8 flex justify-between items-center">
           <img class="mb-8" src="./images/cup.png" alt="" />
           <div class="flex items-center gap-6">
             <h4>Ready to get started?</h4>
@@ -421,13 +437,14 @@
                   type="text"
                   class="bg-transparent border-b-2 border-black w-3/6"
                 />
-                <i class="fa-solid fa-chevron-right bg-orange-600 rounded-full w-7 h-7 text-white inline-flex justify-center items-center"></i>
+                <i
+                  class="fa-solid fa-chevron-right bg-orange-600 rounded-full w-7 h-7 text-white inline-flex justify-center items-center"
+                ></i>
 
                 <!-- Social Icon -->
                 <div class="flex justify-around w-2/5 mt-8 mb-2 text-xl">
                   <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                  <a href="#"><i 
-                  class="fa-brands fa-square-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
                   <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
                 </div>
               </div>
@@ -435,7 +452,9 @@
           </div>
         </div>
         <div class="text-center pt-4 mt-10">
-          <p class="text-sm text-gray-600">© 2027 UIDesign.to - All rights reserved.</p>
+          <p class="text-sm text-gray-600">
+            © 2027 UIDesign.to - All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
